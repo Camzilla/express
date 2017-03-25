@@ -5,7 +5,7 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec babel-node -w server.js -w nuxt.config.js -w api/ server.js",
+    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node -w server.js -w nuxt.config.js -w api/ server.js",
     "build": "nuxt build && babel server.js --out-file server.prod.js",
     "start": "cross-env NODE_ENV=production node server.prod.js",
     "precommit": "npm run lint",
@@ -21,7 +21,9 @@
     "axios": "^0.15.3",
     "cross-env": "^3.1.4",
     "express": "^4.14.0",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "prismic-nodejs": "^1.4.1",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",

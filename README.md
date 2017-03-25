@@ -1,19 +1,14 @@
 <p align="center"><img src="https://cloud.githubusercontent.com/assets/904724/22470179/b84f58d8-e7ce-11e6-995b-0933711ca566.png"></p>
 
 
-# Nuxt.js with Express
+# Nuxt.js with Express and Prismic.io
 
-> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
 
-## Installation
+## Fork notes:
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+A working example of using nuxt with express and prismic io. Prismics documentation and examples are inconsistent, but this works for setting up the basics.
 
-```bash
-vue init nuxt/express <project-name>
-cd <project-name> # move to your project
-npm install # or yarn install
-```
+---
 
 > Make sure to use a version of vue-cli >= 2.1 (vue -V).
 
@@ -29,19 +24,14 @@ npm install # or yarn install
 | npm run build | Build the nuxt.js web application for production. |
 | npm start | Start ExpressJS server in production. |
 
-## Live Demo
 
-[https://express.nuxtjs.org](https://express.nuxtjs.org)
-
-## Examples
-
-- [Handling Protected SSR Routes](https://github.com/nuxt/express/blob/master/protected-ssr-api.md)
 
 ## Documentation
 
 - [ExpressJS](http://expressjs.com/en/guide/routing.html)
 - [Nuxt.js](https://nuxtjs.org/guide/)
 - [Vue.js](http://vuejs.org/guide/)
+- [Prismic.io](https://prismic.io/docs#?lang=node)
 
 ## Licenses
 

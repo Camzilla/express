@@ -3,7 +3,11 @@ const app = require('express')()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
+var PConfig = require('./prismic-configuration');
+var request = require('request');
+
 app.set('port', port)
+
 // Import API Routes
 app.use('/api', require('./api/index'))
 
@@ -25,5 +29,8 @@ if (config.dev) {
 }
 
 // Listen the server
-app.listen(port, host)
+app.listen(port, function() {
+    const repoEndpoint = PConfig.apiEndpoint.replace('/api', '');
+    request.post(repoEndpoint + '/app/settings/onboarding/run', {form: {language: 'node', framework: 'express'}});
+});
 console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console

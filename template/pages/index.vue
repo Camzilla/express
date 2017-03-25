@@ -20,17 +20,20 @@
 import axios from '~plugins/axios'
 
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/users')
-    return {
-      users: data
+    async asyncData () {
+        let prismicRes = await axios.get('/api/prismic')
+        console.log(prismicRes.data);
+
+        let { data } = await axios.get('/api/users')
+        return {
+            users: data
+        }
+    },
+    head () {
+        return {
+            title: 'Users'
+        }
     }
-  },
-  head () {
-    return {
-      title: 'Users'
-    }
-  }
 }
 </script>
 
